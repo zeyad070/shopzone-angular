@@ -1,0 +1,4 @@
+.product-card img {
+  border-top-left-radius: var(--sz-radius, 0.85rem);
+  border-top-right-radius: var(--sz-radius, 0.85rem);
+}

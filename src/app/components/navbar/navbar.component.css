@@ -1,0 +1,8 @@
+.badge {
+  font-size: 0.65rem;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--sz-primary, #4f46e5) !important;
+}

@@ -1,0 +1,874 @@
+{
+  "users": [
+    {
+      "name": "Admin User",
+      "email": "admin@shopzone.com",
+      "password": "admin12345",
+      "role": "admin",
+      "id": "2"
+    },
+    {
+      "name": "zeyad ahemd rabeea",
+      "email": "ziadahmed19000@gmail.com",
+      "password": "123456789",
+      "role": "admin",
+      "id": "fDZviCET-iw"
+    },
+    {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "role": "user",
+      "id": "KXQbT6w-6Go"
+    },
+    {
+      "name": "zeyad ",
+      "email": "ziadahmed190002@gmail.com",
+      "password": "123456789",
+      "role": "user",
+      "id": "1"
+    },
+    {
+      "name": "zeyad rabeea",
+      "email": "ziadahmed190001@gmail.com",
+      "password": "123456789",
+      "role": "user",
+      "id": "A5szWDE_uB4"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Apple 2020 MacBook Air Laptop",
+      "description": "Apple 2020 MacBook Air Laptop: Apple M1 Chip, 13” Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Gray ; Arabic/English",
+      "price": 1950,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=85",
+      "category": "Laptops",
+      "rating": 4.6,
+      "stock": 6
+    },
+    {
+      "id": "2",
+      "name": "DELL G15 5530 Gaming Laptop ",
+      "description": "DELL G15 5530 Gaming Laptop -13th Intel Core i7-13650HX 14 Cores, NVIDIA GeForce RTX 4050 6GB GDDR6 Graphics, 8GB DDR5-4800 MHz RAM, 1TB SSD, 15.6 FHD 120Hz, Backlit Keyboard",
+      "price": 1200,
+      "image": "https://m.media-amazon.com/images/I/51L1-jOtlHL._AC_SX679_.jpg",
+      "category": "Laptops",
+      "rating": 4.3,
+      "stock": 4
+    },
+    {
+      "id": "3",
+      "name": "Smart Watch",
+      "description": "Fitness tracking, heart rate monitor, and 5ATM water resistance.",
+      "price": 199.99,
+      "image": "https://m.media-amazon.com/images/I/51KW6lnUxRL._AC_SX522_.jpg",
+      "category": "Electronics and Accessories",
+      "rating": 4.5,
+      "stock": 2
+    },
+    {
+      "id": "4",
+      "name": "Gaming Desk ",
+      "description": "ODK 48 inch Gaming Desk with LED Lights, Computer Desk with Monitor Stand & Storage Sheves, CPU Stand, Home Office Desk, Black",
+      "price": 550,
+      "image": "https://m.media-amazon.com/images/I/81JAc6pW8-L._AC_SX679_.jpg",
+      "category": "PC Setup",
+      "rating": 4.3,
+      "stock": 0
+    },
+    {
+      "id": "5",
+      "name": "Gaming Keyboard and Mouse Combo",
+      "description": "HP PC Gaming Keyboard and Mouse Combo, RGB Backlit Wired Mouse and Keyboard, Mouse pad,Gaming Headset, Gamer 4 in 1 Bundle for PS4 PS5 and Xbox,(HP Kit)",
+      "price": 199.99,
+      "image": "https://m.media-amazon.com/images/I/91ZoAo8tCvL._AC_SX679_.jpg",
+      "category": "Gaming",
+      "rating": 4.5,
+      "stock": 5
+    },
+    {
+      "id": "6",
+      "name": "Gaming Monitor",
+      "description": "Lenovo Legion R32qc-30 | 31,5 QHD Curved Gaming Monitor | 2560x1440 | 180Hz | 350 nits | 0,5ms Reaktionszeit | VA-Panel | HDMI | DisplayPort | AMD FreeSync | entspiegelt | 8,3kg | schwarz",
+      "price": 300,
+      "image": "https://m.media-amazon.com/images/I/71aEv2ZoORL._AC_SX679_.jpg",
+      "category": "Gaming",
+      "rating": 4.5,
+      "stock": 6
+    },
+    {
+      "id": "7",
+      "name": "Dell Latitude 5520 Laptop",
+      "description": "Dell Latitude 5520 Laptop, 15.6 FHD (1920x1080), i7-1185G7 up to 4.7GHz, 16GB RAM, 512GB SSD, Thunderbolt, HDMI, English Arabic Keyboard, Win11 Pro (Renovated)",
+      "price": 1000,
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&q=80",
+      "category": "Laptops",
+      "rating": 4.2,
+      "stock": 12
+    },
+    {
+      "id": "8",
+      "name": "Dyson OnTrac™ Headphones Ceramic Cinnabar",
+      "description": "Enhanced sound range – 6Hz to 21kHz. Hear more, feel more. Active Noise Cancellation – blocks out unwanted noise. Up to 30 hours of battery life. Fast charging – 10 minutes gives you up to 5 hours of playback. Bluetooth® 5.0 wireless technology. IP54-rated for water and dust resistance.",
+      "price": 100,
+      "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944",
+      "category": "Electronics and Accessories",
+      "rating": 4.2,
+      "stock": 12
+    },
+    {
+      "id": "9",
+      "name": "Gaming Desk",
+      "description": "ODK 48 inch Gaming Desk with LED Lights, Computer Desk with Monitor Stand & Storage Sheves, CPU Stand, Home Office Desk, Black",
+      "price": 700,
+      "image": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+      "category": "PC Setup",
+      "rating": 4.2,
+      "stock": 12
+    },
+    {
+      "id": "10",
+      "name": "Dell Latitude 5550 Laptop",
+      "description": "Dell Latitude 5550 Laptop, 15.6 FHD (1920x1080), i7-1185G7 up to 4.7GHz, 16GB RAM, 512GB SSD, Thunderbolt, HDMI, English Arabic Keyboard, Win11 Pro (Renovated)",
+      "price": 1000,
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "category": "Laptops",
+      "rating": 4.2,
+      "stock": 12
+    }
+  ],
+  "cart": [
+    {
+      "userId": "A5szWDE_uB4",
+      "productId": "3",
+      "quantity": 1,
+      "id": "j-rWDs7bkTQ"
+    }
+  ],
+  "wishlist": [
+    {
+      "userId": "2cGK7Yz30r4",
+      "productId": 1,
+      "name": "Apple 2020 MacBook Air Laptop",
+      "price": 1950,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=85",
+      "category": "Laptops",
+      "rating": 4.6,
+      "id": "YMVHauAO8w8"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 1,
+      "status": "delivered",
+      "total": 129.99,
+      "createdAt": "2026-03-02T10:00:00.000Z",
+      "items": [
+        {
+          "productId": 1,
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "status": "processing",
+      "total": 79.5,
+      "createdAt": "2026-04-01T14:30:00.000Z",
+      "items": [
+        {
+          "productId": 2,
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "status": "pending",
+      "total": 98,
+      "createdAt": "2026-04-10T09:15:00.000Z",
+      "items": [
+        {
+          "productId": 4,
+          "name": "Running Shoes",
+          "price": 98,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "status": "cancelled",
+      "total": 34.9,
+      "createdAt": "2026-02-15T18:00:00.000Z",
+      "items": [
+        {
+          "productId": 3,
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        }
+      ]
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 556.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 5,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-12T11:53:16.533Z",
+      "id": "2qmCuFVCrsY"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 318,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 4,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:18:53.067Z",
+      "id": "F5jqMJMT4kY"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 279.2,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 8,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:19:09.101Z",
+      "id": "dnnHlH8WXU4"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 174.5,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:19:18.854Z",
+      "id": "N3Ui7_YH-V0"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 159,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:22:32.224Z",
+      "id": "rb5GFMurB_A"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 238.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:23:00.068Z",
+      "id": "-eOTeFJjtk8"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 79.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:30:50.251Z",
+      "id": "98eF0fTf8YY"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 1599.92,
+      "items": [
+        {
+          "productId": "5",
+          "name": "Smart Watch",
+          "price": 199.99,
+          "quantity": 7,
+          "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "5",
+          "name": "Smart Watch",
+          "price": 199.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-13T14:31:44.692Z",
+      "id": "bylsA2WgzEA"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 209.49,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-15T10:48:58.531Z",
+      "id": "GrteEoiXFg8"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 104.69999999999999,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-17T19:43:51.447Z",
+      "id": "hyBDO6QnK1A"
+    },
+    {
+      "userId": 2,
+      "status": "pending",
+      "total": 389.97,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-18T10:49:07.987Z",
+      "id": "547cH28t6do"
+    },
+    {
+      "userId": 1,
+      "status": "pending",
+      "total": 79.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T15:23:17.548Z",
+      "id": "__Ps9EcQuus"
+    },
+    {
+      "userId": "4JeX9tWbmbY",
+      "status": "pending",
+      "total": 129.99,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T17:26:38.720Z",
+      "id": "22gMUbaCZNY"
+    },
+    {
+      "userId": "3H42BUJOCGo",
+      "status": "pending",
+      "total": 129.99,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T17:28:38.414Z",
+      "id": "LyOp9D4Bri4"
+    },
+    {
+      "userId": "cb3PLbwhVFM",
+      "status": "pending",
+      "total": 129.99,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T18:03:56.858Z",
+      "id": "5i_cb8Pf0iw"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 129.99,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T18:27:44.724Z",
+      "id": "QehL6QJpcPE"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 79.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T19:17:34.761Z",
+      "id": "jYN3icy-knU"
+    },
+    {
+      "userId": "wnjGsfXuQfY",
+      "status": "pending",
+      "total": 79.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T19:18:31.418Z",
+      "id": "pQ9iCTNLy_k"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 45,
+      "items": [
+        {
+          "productId": "6",
+          "name": "Desk Lamp",
+          "price": 45,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T20:09:08.338Z",
+      "id": "y69x4AU5XcU"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 238.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T21:05:31.036Z",
+      "id": "tkNyT6kQv5Y"
+    },
+    {
+      "userId": "1",
+      "status": "pending",
+      "total": 298.6,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T21:08:20.646Z",
+      "id": "z-ek7q4N8bE"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 114.4,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Ceramic Mug Set",
+          "price": 34.9,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T21:15:23.474Z",
+      "id": "j5Wk72_AxNw"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 318,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 4,
+          "image": "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T21:16:28.271Z",
+      "id": "Ckz7uGytExc"
+    },
+    {
+      "userId": "1",
+      "status": "pending",
+      "total": 98,
+      "items": [
+        {
+          "productId": "4",
+          "name": "Running Shoes",
+          "price": 98,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-19T21:17:43.750Z",
+      "id": "ovBXjpHdyXg"
+    },
+    {
+      "userId": "1",
+      "status": "pending",
+      "total": 529.97,
+      "items": [
+        {
+          "productId": "5",
+          "name": "Smart Watch",
+          "price": 199.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "1",
+          "name": "Wireless Headphones",
+          "price": 129.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "5",
+          "name": "Smart Watch",
+          "price": 199.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "createdAt": "2026-04-20T14:02:22.874Z",
+      "id": "-uoglsQyseY"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 300,
+      "items": [
+        {
+          "productId": "9",
+          "name": "Gaming Monitor",
+          "price": 300,
+          "quantity": 1,
+          "image": "https://m.media-amazon.com/images/I/71aEv2ZoORL._AC_SX679_.jpg"
+        }
+      ],
+      "createdAt": "2026-04-21T10:39:23.393Z",
+      "id": "5xV3Y8xUh-E"
+    },
+    {
+      "userId": "fDZviCET-iw",
+      "status": "pending",
+      "total": 11779.5,
+      "items": [
+        {
+          "productId": "2",
+          "name": "Minimal Backpack",
+          "price": 79.5,
+          "quantity": 1,
+          "image": "https://m.media-amazon.com/images/I/51ShRSSlAmL._AC_.jpg"
+        },
+        {
+          "productId": "1",
+          "name": "Apple iPhone 17 Pro Max",
+          "price": 1950,
+          "quantity": 6,
+          "image": "https://m.media-amazon.com/images/I/61B3uxeAvrL._AC_SX679_.jpg"
+        }
+      ],
+      "createdAt": "2026-04-21T11:36:23.594Z",
+      "id": "nWTwKU2q59A"
+    },
+    {
+      "userId": "2cGK7Yz30r4",
+      "status": "pending",
+      "total": 4350,
+      "items": [
+        {
+          "productId": "1",
+          "name": "Apple 2020 MacBook Air Laptop",
+          "price": 1950,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=85"
+        },
+        {
+          "productId": "2",
+          "name": "DELL G15 5530 Gaming Laptop ",
+          "price": 1200,
+          "quantity": 2,
+          "image": "https://m.media-amazon.com/images/I/51L1-jOtlHL._AC_SX679_.jpg"
+        }
+      ],
+      "createdAt": "2026-04-21T18:42:03.296Z",
+      "id": "lroWkxDhvkk"
+    },
+    {
+      "userId": "A5szWDE_uB4",
+      "status": "pending",
+      "total": 199.99,
+      "items": [
+        {
+          "productId": "3",
+          "name": "Smart Watch",
+          "price": 199.99,
+          "quantity": 1,
+          "image": "https://m.media-amazon.com/images/I/51KW6lnUxRL._AC_SX522_.jpg"
+        }
+      ],
+      "createdAt": "2026-04-21T18:49:00.620Z",
+      "id": "GbILDmfI_yY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

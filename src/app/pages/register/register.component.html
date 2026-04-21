@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-md-9 col-lg-6">
+    <div class="card sz-card shadow-sm">
+      <div class="card-body p-4">
+        <h1 class="h4 mb-3 sz-page-title">Create account</h1>
+        <p class="text-muted small mb-4">Join ShopZone in under a minute.</p>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="mb-3">
+            <label class="form-label" for="name">Full name</label>
+            <input id="name" class="form-control" type="text"
+              formControlName="name" />
+            <div class="invalid-feedback d-block"
+              *ngIf="form.controls.name.touched && form.controls.name.invalid">
+              Please enter your name.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input id="email" class="form-control" type="email"
+              formControlName="email" />
+            <div class="invalid-feedback d-block"
+              *ngIf="form.controls.email.touched && form.controls.email.invalid">
+              Enter a valid email address.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input id="password" class="form-control" type="password"
+              formControlName="password" />
+            <div class="invalid-feedback d-block"
+              *ngIf="form.controls.password.touched && form.controls.password.invalid">
+              Password must be at least 8 characters.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="confirm">Confirm password</label>
+            <input id="confirm" class="form-control" type="password"
+              formControlName="confirmPassword" />
+            <div class="invalid-feedback d-block" *ngIf="mismatch()">Passwords
+              must match.</div>
+          </div>
+          <button class="btn btn-primary w-100" type="submit"
+            [disabled]="submitting || form.invalid || mismatch()">
+            <span *ngIf="submitting"
+              class="spinner-border spinner-border-sm me-2"
+              aria-hidden="true"></span>
+            Register
+          </button>
+        </form>
+        <div class="text-center small mt-3">
+          Already have an account?
+          <a routerLink="/login">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

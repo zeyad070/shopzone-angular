@@ -1,0 +1,482 @@
+<section class="lp-hero">
+  <div class="lp-hero__bg-mesh">
+    <span class="lp-blob lp-blob--1"></span>
+    <span class="lp-blob lp-blob--2"></span>
+    <span class="lp-blob lp-blob--3"></span>
+  </div>
+
+  <div class="container lp-hero__container">
+    <div class="row align-items-center lp-hero__row">
+
+      <div class="col-lg-6 lp-hero__content">
+        <div class="lp-hero__badge lp-animate lp-fade-up">
+          <span class="lp-badge-dot"></span>
+          Free Shipping on Orders Over $100
+        </div>
+
+        <h1 class="lp-hero__title lp-animate lp-fade-up lp-delay-1">
+          Design Your<br />
+          <em class="lp-hero__title-em">Ultimate Setup</em>
+        </h1>
+
+        <p class="lp-hero__sub lp-animate lp-fade-up lp-delay-2">
+          Discover powerful laptops, gaming accessories, and high-performance
+          gear
+          built for work, gaming, and creativity.
+        </p>
+
+        <div class="lp-hero__search lp-animate lp-fade-up lp-delay-3">
+          <div class="lp-search-wrap">
+            <svg class="lp-search-icon" width="18" height="18"
+              viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+            </svg>
+            <input
+              type="text"
+              class="lp-search-input"
+              placeholder="Search laptops, keyboards, mouses…"
+              [value]="searchQuery"
+              (input)="searchQuery = $any($event.target).value"
+              (keyup.enter)="onSearch()" />
+            <button class="lp-search-btn" (click)="onSearch()"
+              aria-label="Search">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div class="lp-hero__actions lp-animate lp-fade-up lp-delay-4">
+          <a routerLink="/products" class="lp-btn lp-btn--primary">
+            Shop Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a routerLink="/products" class="lp-btn lp-btn--ghost">
+            Browse Categories
+          </a>
+        </div>
+
+        <div class="lp-hero__stats lp-animate lp-fade-up lp-delay-5">
+          <div class="lp-stat">
+            <span class="lp-stat__num">12k<span
+                class="lp-stat__sup">+</span></span>
+            <span class="lp-stat__label">Happy Customers</span>
+          </div>
+          <div class="lp-stat__sep"></div>
+          <div class="lp-stat">
+            <span class="lp-stat__num">850<span
+                class="lp-stat__sup">+</span></span>
+            <span class="lp-stat__label">Premium Products</span>
+          </div>
+          <div class="lp-stat__sep"></div>
+          <div class="lp-stat">
+            <span class="lp-stat__num">4.9<span
+                class="lp-stat__sup">★</span></span>
+            <span class="lp-stat__label">Average Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 lp-hero__visual lp-animate lp-fade-left lp-delay-2">
+        <div class="lp-hero__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=85"
+            alt="Gaming Setup"
+            class="lp-hero__img"
+            loading="eager" />
+          <div class="lp-hero__float-card">
+            <div class="lp-float-card__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=120&q=80"
+                alt="Gaming Keyboard"
+                class="lp-float-card__img" />
+            </div>
+            <div class="lp-float-card__info">
+              <span class="lp-float-card__label">Trending Now</span>
+              <span class="lp-float-card__name">PC Gaming</span>
+              <span class="lp-float-card__price">$649</span>
+            </div>
+            <div class="lp-float-card__action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+          <div class="lp-hero__rating-badge">
+            <span class="lp-rating-stars">★★★★★</span>
+            <span class="lp-rating-text">4.9/5 from 2,400+ reviews</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lp-hero__scroll-hint">
+    <span class="lp-scroll-line"></span>
+    <span class="lp-scroll-text">Scroll to explore</span>
+  </div>
+</section>
+
+<div class="lp-marquee-wrap">
+  <div class="lp-marquee-track">
+    <span class="lp-marquee-item">Premium Quality <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Free Shipping <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">30-Day Returns <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Expert Design <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Sustainable Materials <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">5-Year Warranty <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Premium Quality <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Free Shipping <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">30-Day Returns <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Expert Design <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">Sustainable Materials <span
+        class="lp-marquee-dot">✦</span></span>
+    <span class="lp-marquee-item">5-Year Warranty <span
+        class="lp-marquee-dot">✦</span></span>
+  </div>
+</div>
+
+<section class="lp-features">
+  <div class="container">
+    <div class="lp-section-head lp-animate lp-fade-up">
+      <span class="lp-section-tag">Why ShopZone</span>
+      <h2 class="lp-section-title lp-why__title">
+        Technology That Powers<br />
+        <em>Your Performance</em>
+      </h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-xl-3 lp-animate lp-fade-up"
+        [class.lp-delay-1]="i === 1"
+        [class.lp-delay-2]="i === 2"
+        [class.lp-delay-3]="i === 3"
+        *ngFor="let f of features; let i = index">
+        <div class="lp-feature-card">
+          <div class="lp-feature-card__icon-wrap">
+            <span [innerHTML]="f.icon"></span>
+          </div>
+          <h3 class="lp-feature-card__title">{{ f.title }}</h3>
+          <p class="lp-feature-card__desc">{{ f.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-products">
+  <div class="container">
+    <div class="lp-products__header">
+      <div class="lp-animate lp-fade-up">
+        <span class="lp-section-tag">Curated Collection</span>
+        <h2 class="lp-section-title">Our Finest Pieces</h2>
+        <p class="lp-section-sub">
+          Handpicked favourites loved by thousands of happy gamers, developers,
+          and
+          professionals across the globe.
+        </p>
+      </div>
+      <a routerLink="/products"
+        class="lp-btn lp-btn--outline lp-animate lp-fade-up">
+        View All
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4 lp-animate lp-fade-up"
+        [class.lp-delay-1]="i === 1"
+        [class.lp-delay-2]="i === 2"
+        *ngFor="let p of featuredProducts; let i = index">
+        <div class="lp-product-card">
+          <div class="lp-product-card__img-wrap">
+            <img [src]="p.image" [alt]="p.name" class="lp-product-card__img"
+              loading="lazy" />
+            <div class="lp-product-card__overlay">
+              <a routerLink="/products" class="lp-product-card__quick-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Quick View
+              </a>
+            </div>
+            <span class="lp-product-card__badge" *ngIf="p.badge">{{ p.badge
+              }}</span>
+            <button class="lp-product-card__wish" aria-label="Add to wishlist">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="lp-product-card__body">
+            <span class="lp-product-card__cat">{{ p.category }}</span>
+            <h4 class="lp-product-card__name">{{ p.name }}</h4>
+            <div class="lp-product-card__rating">
+              <span class="lp-stars">★★★★★</span>
+              <span class="lp-review-count">({{ p.reviews }} reviews)</span>
+            </div>
+            <div class="lp-product-card__footer">
+              <span class="lp-product-card__price">${{ p.price }}</span>
+              <a routerLink="/products" class="lp-add-cart-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-why">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-5 lp-animate lp-fade-right">
+        <div class="lp-why__collage">
+          <img
+            src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&q=80"
+            alt="Elegant living room interior"
+            class="lp-why__img-main"
+            loading="lazy" />
+          <img
+            src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7"
+            alt="Furniture detail"
+            class="lp-why__img-accent"
+            loading="lazy" />
+          <div class="lp-why__float-badge">
+            <span class="lp-why__float-num">15+</span>
+            <span class="lp-why__float-label">Years of<br />Craftsmanship</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 lp-animate lp-fade-left lp-delay-1">
+        <span class="lp-section-tag">Our Promise</span>
+        <h2 class="lp-section-title lp-why__title">
+          Technology That Powers<br />
+          <em>Your Setup</em>
+        </h2>
+        <p class="lp-why__body">
+          We provide high-performance laptops, gaming accessories, and
+          professional tech gear built for speed, power, and reliability. Our
+          products are designed to enhance your gaming, work, and creative
+          experience.
+        </p>
+        <ul class="lp-why__points">
+          <li class="lp-why__point" *ngFor="let pt of whyPoints">
+            <div class="lp-why__point-check">
+              <span [innerHTML]="pt.icon"></span>
+            </div>
+            <div class="lp-why__point-text">
+              <strong>{{ pt.title }}</strong>
+              <span>{{ pt.desc }}</span>
+            </div>
+          </li>
+        </ul>
+        <a routerLink="/products" class="lp-btn lp-btn--primary">
+          Discover the Collection
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="lp-testimonials">
+  <div class="container">
+    <div class="lp-section-head lp-animate lp-fade-up">
+      <span class="lp-section-tag">Testimonials</span>
+      <h2 class="lp-section-title">Loved by Homeowners<br />Around the
+        World</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4 lp-animate lp-fade-up"
+        [class.lp-delay-1]="i === 1"
+        [class.lp-delay-2]="i === 2"
+        *ngFor="let t of testimonials; let i = index">
+        <div class="lp-testi-card">
+          <div class="lp-testi-card__top">
+            <span class="lp-testi-stars">★★★★★</span>
+            <span class="lp-testi-quote">"</span>
+          </div>
+          <p class="lp-testi-card__text">{{ t.text }}</p>
+          <div class="lp-testi-card__author">
+            <img [src]="t.avatar" [alt]="t.name" class="lp-testi-card__avatar"
+              loading="lazy" />
+            <div class="lp-testi-card__info">
+              <span class="lp-testi-card__name">{{ t.name }}</span>
+              <span class="lp-testi-card__role">{{ t.role }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-cta-band lp-animate lp-fade-up">
+  <div class="container">
+    <div class="lp-cta-band__inner">
+      <div class="lp-cta-band__text">
+        <h2 class="lp-cta-band__title">Upgrade Your Setup Today</h2>
+        <p class="lp-cta-band__sub"> Join thousands of users building their
+          perfect tech setup with our products..</p>
+      </div>
+      <div class="lp-cta-band__actions">
+        <a routerLink="/products" class="lp-btn lp-btn--light">
+          Start Shopping
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a routerLink="/register" class="lp-btn lp-btn--light-outline">
+          Create Account
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="lp-footer">
+  <div class="container">
+    <div class="row g-5 lp-footer__top">
+
+      <div class="col-lg-4">
+        <a routerLink="/" class="lp-footer__brand">ShopZone</a>
+        <p class="lp-footer__tagline">
+          Redefining modern living through thoughtfully designed spaces and
+          premium furniture crafted for the way you live.
+        </p>
+        <div class="lp-footer__socials">
+          <a href="#" class="lp-social-btn" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><rect x="2" y="2" width="20" height="20"
+                rx="5" ry="5" /><path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line
+                x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+          </a>
+          <a href="#" class="lp-social-btn" aria-label="Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
+          </a>
+          <a href="#" class="lp-social-btn" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
+          </a>
+          <a href="#" class="lp-social-btn" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.498 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.568 0-2.386-1.715-4.054-4.163-4.054-2.837 0-4.498 2.127-4.498 4.327 0 .857.33 1.775.741 2.277a.3.3 0 01.069.284c-.076.315-.243 1.003-.274 1.142-.044.184-.146.223-.337.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446C17.523 22 22 17.523 22 12S17.523 2 12 2z" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5 class="lp-footer__col-title">Shop</h5>
+        <ul class="lp-footer__links">
+          <li><a routerLink="/products">All Products</a></li>
+          <li><a routerLink="/products">New Arrivals</a></li>
+          <li><a routerLink="/products">Best Sellers</a></li>
+          <li><a routerLink="/products">Sale Items</a></li>
+          <li><a routerLink="/products">Gift Ideas</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5 class="lp-footer__col-title">Account</h5>
+        <ul class="lp-footer__links">
+          <li><a routerLink="/login">Sign In</a></li>
+          <li><a routerLink="/register">Register</a></li>
+          <li><a routerLink="/cart">My Cart</a></li>
+          <li><a routerLink="/wishlist">Wishlist</a></li>
+          <li><a routerLink="/orders">My Orders</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5 class="lp-footer__col-title">Support</h5>
+        <ul class="lp-footer__links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5 class="lp-footer__col-title">Company</h5>
+        <ul class="lp-footer__links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="lp-footer__bottom">
+      <span class="lp-footer__copy">© 2025 ShopZone. All rights reserved.</span>
+      <div class="lp-footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>

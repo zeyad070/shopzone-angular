@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg sz-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand sz-brand" routerLink="/products">ShopZone</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#szNav"
+      aria-controls="szNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="szNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products"
+            routerLinkActive="active">Products</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link position-relative" routerLink="/wishlist"
+            routerLinkActive="active">
+            Wishlist
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              *ngIf="(wishlist.wishlistCount$ | async) as count">
+              {{ count }}
+            </span>
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link position-relative" routerLink="/cart"
+            routerLinkActive="active">
+            Cart
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              *ngIf="(cart.cartCount$ | async) !== 0">
+              {{ cart.cartCount$ | async }}
+            </span>
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/orders"
+            routerLinkActive="active">Orders</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/profile"
+            routerLinkActive="active">Profile</a>
+        </li>
+
+      </ul>
+
+      <div
+        class="d-flex align-items-center gap-2 flex-wrap justify-content-end">
+
+        <button
+          type="button"
+          class="btn btn-sm sz-theme-btn"
+          (click)="theme.toggle()"
+          [title]="theme.isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+          {{ theme.isDark ? '☀️' : '🌙' }}
+        </button>
+
+        <ng-container *ngIf="!isLoggedIn; else authed">
+          <a class="btn btn-outline-primary btn-sm"
+            routerLink="/login">Login</a>
+          <a class="btn btn-primary btn-sm" routerLink="/register">Register</a>
+        </ng-container>
+
+        <ng-template #authed>
+          <span class="small text-muted d-none d-md-inline">
+            Hi, {{ auth.getCurrentUser()?.name }}
+          </span>
+          <button type="button" class="btn btn-outline-danger btn-sm"
+            (click)="logout()">
+            Logout
+          </button>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</nav>

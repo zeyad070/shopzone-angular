@@ -1,0 +1,109 @@
+<div class="py-4 text-center" *ngIf="loading">
+  <div class="sz-skeleton mx-auto mb-3 rounded-4"
+    style="max-width: 720px; height: 360px"></div>
+  <div class="sz-skeleton mx-auto rounded-3"
+    style="max-width: 520px; height: 22px"></div>
+</div>
+
+<div class="row g-4 align-items-start" *ngIf="!loading && product">
+
+  <div class="col-12 col-lg-6">
+    <div
+      class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-sm border bg-white">
+      <img [src]="product.image" class="object-fit-cover"
+        [alt]="product.name" />
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6">
+
+    <div class="small text-muted">{{ product.category }}</div>
+    <h1 class="h2 sz-page-title mt-1">{{ product.name }}</h1>
+
+    <div class="d-flex align-items-center gap-3 my-3">
+      <div class="h4 mb-0 text-primary">
+        ${{ product.price | number: '1.2-2' }}
+      </div>
+      <div class="text-warning">
+        ★ {{ product.rating | number: '1.1-1' }}
+      </div>
+      <span class="badge text-bg-secondary">
+        Stock: {{ product.stock }}
+      </span>
+    </div>
+
+    <!-- Admin stock controls -->
+    <div class="d-flex gap-2 mb-3" *ngIf="isAdmin()">
+      <button class="btn btn-outline-danger btn-sm" (click)="updateStock(-1)">
+        - Stock
+      </button>
+      <button class="btn btn-outline-success btn-sm" (click)="updateStock(1)">
+        + Stock
+      </button>
+    </div>
+
+    <p class="lead fs-6 text-muted">{{ product.description }}</p>
+
+    <form class="mt-4" [formGroup]="form" (ngSubmit)="addToCart()">
+      <label class="form-label" for="qty">Quantity</label>
+
+      <div class="row g-2 align-items-end">
+        <div class="col-6 col-md-4">
+          <input
+            id="qty"
+            class="form-control"
+            type="number"
+            formControlName="quantity"
+            [min]="1"
+            [max]="maxQty()" />
+
+          <div class="invalid-feedback d-block"
+            *ngIf="form.controls.quantity.touched && form.controls.quantity.hasError('integer')">
+            Enter a whole number quantity.
+          </div>
+
+          <div class="invalid-feedback d-block"
+            *ngIf="form.controls.quantity.touched && form.controls.quantity.invalid && !form.controls.quantity.hasError('integer')">
+            Choose a quantity between 1 and {{ product.stock }}.
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8 d-flex align-items-center gap-2 flex-wrap">
+          <button
+            class="btn btn-primary sz-btn-cart"
+            type="submit"
+            [disabled]="product.stock <= 0 || form.invalid || exceedsMaxQty() || addingToCart">
+            <span *ngIf="addingToCart"
+              class="spinner-border spinner-border-sm me-2"></span>
+            Add to cart
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary sz-wishlist-detail-btn"
+            (click)="toggleWishlist()"
+            [disabled]="togglingWishlist"
+            [title]="inWishlist ? 'Remove from wishlist' : 'Add to wishlist'">
+            <span *ngIf="togglingWishlist"
+              class="spinner-border spinner-border-sm me-1"></span>
+            <span *ngIf="!togglingWishlist">
+              {{ inWishlist ? '❤️ Wishlisted' : '🤍 Wishlist' }}
+            </span>
+          </button>
+
+          <span class="text-danger ms-md-2 d-inline-block mt-2 mt-md-0"
+            *ngIf="product.stock <= 0">
+            Out of Stock
+          </span>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div class="text-center py-5" *ngIf="!loading && !product">
+  <div class="h4 mb-2">Product not found</div>
+  <a routerLink="/products" class="btn btn-outline-primary">Back to products</a>
+</div>

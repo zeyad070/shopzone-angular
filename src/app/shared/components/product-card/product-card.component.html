@@ -1,0 +1,72 @@
+<div class="card h-100 sz-card product-card">
+
+  <div class="sz-card-img-wrapper position-relative">
+    <div class="ratio ratio-4x3 bg-light">
+      <img [src]="product.image" class="card-img-top object-fit-cover"
+        [alt]="product.name" />
+    </div>
+
+    <button
+      type="button"
+      class="sz-wishlist-btn"
+      (click)="onToggleWishlist()"
+      [disabled]="togglingWishlist"
+      [title]="inWishlist ? 'Remove from wishlist' : 'Add to wishlist'">
+      <span *ngIf="togglingWishlist"
+        class="spinner-border spinner-border-sm"></span>
+      <span *ngIf="!togglingWishlist">{{ inWishlist ? '❤️' : '🤍' }}</span>
+    </button>
+  </div>
+
+  <div class="card-body d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+      <h3 class="h6 card-title mb-0">{{ product.name }}</h3>
+      <span
+        class="badge rounded-pill sz-badge-stock"
+        [ngClass]="{
+          'text-bg-danger': stockLabel() === 'out',
+          'text-bg-warning': stockLabel() === 'low',
+          'text-bg-success': stockLabel() === 'ok'
+        }">
+        <ng-container [ngSwitch]="stockLabel()">
+          <span *ngSwitchCase="'out'">Out of stock</span>
+          <span *ngSwitchCase="'low'">Low stock</span>
+          <span *ngSwitchDefault>In stock</span>
+        </ng-container>
+      </span>
+    </div>
+
+    <p class="text-muted small flex-grow-1">{{ product.category }}</p>
+
+    <div class="d-flex align-items-center justify-content-between mt-2">
+      <div>
+        <div class="fw-bold text-primary">${{ product.price | number: '1.2-2'
+          }}</div>
+        <div class="small text-warning">★ {{ product.rating | number: '1.1-1'
+          }}</div>
+      </div>
+      <div class="d-flex flex-column align-items-end gap-2">
+        <a
+          class="btn btn-sm btn-outline-secondary"
+          [routerLink]="['/products', product.id]"
+          [class.disabled]="product.stock <= 0"
+          [attr.tabindex]="product.stock <= 0 ? -1 : 0"
+          [attr.aria-disabled]="product.stock <= 0"
+          (click)="onDetailsClick($event)">
+          Details
+        </a>
+        <button
+          *ngIf="showAddButton"
+          type="button"
+          class="btn btn-sm btn-primary sz-btn-cart"
+          (click)="onAdd()"
+          [disabled]="product.stock <= 0 || adding">
+          <span *ngIf="adding" class="spinner-border spinner-border-sm me-1"
+            aria-hidden="true"></span>
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+.sz-loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.18);
+  z-index: 1080;
+  pointer-events: all;
+}
+
+.sz-loading__panel {
+  background: #fff;
+  padding: 1.25rem 1.75rem;
+  display: grid;
+  justify-items: center;
+}

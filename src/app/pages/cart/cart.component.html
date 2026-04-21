@@ -1,0 +1,130 @@
+<div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+  <div>
+    <h1 class="h3 sz-page-title mb-1">Your cart</h1>
+    <p class="text-muted mb-0">Hello From Your Cart</p>
+  </div>
+  <button
+    class="btn btn-primary"
+    type="button"
+    (click)="checkout()"
+    [disabled]="items.length === 0 || checkoutBusy || hasStockProblems()">
+    <span *ngIf="checkoutBusy" class="spinner-border spinner-border-sm me-2"
+      aria-hidden="true"></span>
+    Checkout
+  </button>
+</div>
+
+<div class="py-5 text-center card sz-card" *ngIf="loading">
+  <div class="card-body">
+    <div class="spinner-border text-primary" role="status"
+      aria-label="Loading"></div>
+  </div>
+</div>
+
+<div class="py-5 text-center card sz-card"
+  *ngIf="!loading && items.length === 0">
+  <div class="card-body">
+    <div class="display-6 mb-2">Your cart is empty</div>
+    <p class="text-muted mb-3">Browse products and tap “Add to cart” to fill it
+      up.</p>
+    <a routerLink="/products" class="btn btn-primary">Browse products</a>
+  </div>
+</div>
+
+<form #cartForm="ngForm" *ngIf="!loading && items.length > 0">
+  <div class="card sz-card">
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Product</th>
+            <th class="text-end">Price</th>
+            <th style="width: 160px">Qty</th>
+            <th class="text-end">Line total</th>
+            <th style="width: 120px"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items; trackBy: trackItem">
+            <td>
+              <div class="d-flex align-items-center gap-3">
+                <img
+                  *ngIf="item.product?.image"
+                  [src]="item.product!.image"
+                  width="56"
+                  height="56"
+                  class="rounded border object-fit-cover"
+                  alt />
+                <div>
+                  <div class="fw-semibold">{{ item.product?.name ??
+                    'Unknown product' }}</div>
+                  <div class="small text-muted">ID {{ item.productId }}</div>
+                </div>
+              </div>
+            </td>
+            <td class="text-end">${{ (item.product?.price ?? 0) | number:
+              '1.2-2' }}</td>
+            <td>
+              <input
+                class="form-control"
+                type="number"
+                [name]="'qty' + item.id"
+                [ngModel]="item.quantity"
+                (ngModelChange)="onQtyChange(item, $event)"
+                [min]="1"
+                [max]="maxQty(item)"
+                [disabled]="!item.product || isUpdatingQty(item.id)"
+                required />
+            </td>
+            <td class="text-end fw-semibold">${{ lineTotal(item) | number:
+              '1.2-2' }}</td>
+            <td class="text-end">
+              <button
+                type="button"
+                class="btn btn-outline-danger btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#removeCartModal"
+                (click)="confirmRemove(item)">
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+      <div class="text-muted small">Taxes and shipping are not included
+        (demo).</div>
+      <div class="h5 mb-0">Total: ${{ total() | number: '1.2-2' }}</div>
+    </div>
+  </div>
+</form>
+
+<div
+  class="modal fade"
+  id="removeCartModal"
+  tabindex="-1"
+  aria-labelledby="removeCartModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="removeCartModalLabel">Remove item</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close" (click)="cancelRemove()"></button>
+      </div>
+      <div class="modal-body">
+        Remove <span class="fw-semibold">{{ itemToRemove?.product?.name
+          }}</span> from your cart?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary"
+          data-bs-dismiss="modal" (click)="cancelRemove()">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+          (click)="removeConfirmed()">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>

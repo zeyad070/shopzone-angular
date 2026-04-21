@@ -1,0 +1,22 @@
+<div class="mb-4">
+  <h1 class="h3 sz-page-title mb-1">Orders</h1>
+  <p class="text-muted mb-0">Track your recent purchases and fulfillment status.</p>
+</div>
+
+<div class="py-5 text-center card sz-card" *ngIf="loading">
+  <div class="card-body">
+    <div class="spinner-border text-primary" role="status" aria-label="Loading"></div>
+  </div>
+</div>
+
+<div class="text-center py-5 card sz-card" *ngIf="!loading && orders.length === 0">
+  <div class="card-body">
+    <div class="h4 mb-2">No orders yet</div>
+    <p class="text-muted mb-3">Your completed purchases will appear here.</p>
+    <a routerLink="/products" class="btn btn-primary">Start shopping</a>
+  </div>
+</div>
+
+<div *ngIf="!loading && orders.length > 0">
+  <app-order-card *ngFor="let order of orders; trackBy: trackOrder" [order]="order"></app-order-card>
+</div>

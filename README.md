@@ -102,53 +102,146 @@ The project was built as part of the **ITI Full Stack .NET & Generative AI Devel
 ## 📁 Folder Structure
 
 ```
-shopzone-angular/
-├── public/                     # Static assets (favicon, etc.)
-├── src/
-│   ├── app/
-│   │   ├── core/
-│   │   │   ├── constants/      # api constants
-│   │   │   ├── interceptors/   # error, Loading interceptors
-│   │   │   └── services/       # Loading services
-│   │   ├── guards/             # auth, noauth guards
-│   │   ├── interceptors/       # auth interceptor
-│   │   ├── models/             # enttityid , cart, order item, order, product, user, wishlist
-│   │   ├── pages/
-│   │   │   ├── cart/          
-│   │   │   ├── Landing Page/          
-│   │   │   ├── Login/       
-│   │   │   ├── orders/          
-│   │   │   ├── product-details/     
-│   │   │   ├── product-list/      
-│   │   │   ├── profile/
-│   │   │   ├── register/       
-│   │   │   └── wishlist/
-│   │   ├── services/             # auth , cart, order, product, theme, wishlist services
-│   │   ├── shared/
-│   │   │   ├── components/
-│   │   │   |   ├── loading overlay/          
-│   │   │   |   ├── order card/           
-│   │   │   |   ├── product card/           
-│   │   │   └── validators/         # TypeScript interfaces & types
-│   │   ├── app.modules.ts
-│   │   ├── app-routing-module.ts
-│   │   ├── app.config.ts
-│   │   ├── app.css
-│   │   ├── app.html
-│   │   ├── app.ts
-│   │   └── app.routes.ts       # Application routing with guards
-│   ├── assets/                 # Images and static resources
-│   ├── styles.css              # Global styles
-│   ├── index.html
-│   └── main.ts                 # Application bootstrap
-├── db.json                     # JSON Server mock database
-├── angular.json                # Angular CLI workspace config
-├── package.json                # Dependencies & npm scripts
-├── tsconfig.json               # TypeScript configuration
-└── README.md
+├── 📁 .angular
+├── 📁 public
+│   └── 📄 favicon.ico
+├── 📁 src
+│   ├── 📁 app
+│   │   ├── 📁 components
+│   │   │   ├── 📁 navbar
+│   │   │   │   ├── 🎨 navbar.component.css
+│   │   │   │   ├── 🌐 navbar.component.html
+│   │   │   │   └── 📄 navbar.component.ts
+│   │   │   └── 📁 not-found
+│   │   │       ├── 📄 not-found-routing.module.ts
+│   │   │       ├── 🎨 not-found.component.css
+│   │   │       ├── 🌐 not-found.component.html
+│   │   │       ├── 📄 not-found.component.ts
+│   │   │       └── 📄 not-found.module.ts
+│   │   ├── 📁 core
+│   │   │   ├── 📁 constants
+│   │   │   │   └── 📄 api.constants.ts
+│   │   │   ├── 📁 interceptors
+│   │   │   │   ├── 📄 error.interceptor.ts
+│   │   │   │   └── 📄 loading.interceptor.ts
+│   │   │   └── 📁 services
+│   │   │       └── 📄 loading.service.ts
+│   │   ├── 📁 guards
+│   │   │   ├── 📄 auth.guard.ts
+│   │   │   └── 📄 noAuth.guard.ts
+│   │   ├── 📁 interceptors
+│   │   │   └── 📄 auth.interceptor.ts
+│   │   ├── 📁 models
+│   │   │   ├── 📄 cart-item.model.ts
+│   │   │   ├── 📄 entity-id.model.ts
+│   │   │   ├── 📄 order-item.model.ts
+│   │   │   ├── 📄 order.model.ts
+│   │   │   ├── 📄 product.model.ts
+│   │   │   ├── 📄 user.model.ts
+│   │   │   └── 📄 wishlist-item.model.ts
+│   │   ├── 📁 pages
+│   │   │   ├── 📁 Landing-Page
+│   │   │   │   ├── 📄 home-routing.module.ts
+│   │   │   │   ├── 🎨 home.component.css
+│   │   │   │   ├── 🌐 home.component.html
+│   │   │   │   ├── 📄 home.component.ts
+│   │   │   │   └── 📄 home.module.ts
+│   │   │   ├── 📁 cart
+│   │   │   │   ├── 📄 cart-routing.module.ts
+│   │   │   │   ├── 🎨 cart.component.css
+│   │   │   │   ├── 🌐 cart.component.html
+│   │   │   │   ├── 📄 cart.component.ts
+│   │   │   │   └── 📄 cart.module.ts
+│   │   │   ├── 📁 login
+│   │   │   │   ├── 📄 login-routing.module.ts
+│   │   │   │   ├── 🎨 login.component.css
+│   │   │   │   ├── 🌐 login.component.html
+│   │   │   │   ├── 📄 login.component.ts
+│   │   │   │   └── 📄 login.module.ts
+│   │   │   ├── 📁 orders
+│   │   │   │   ├── 📄 orders-routing.module.ts
+│   │   │   │   ├── 🎨 orders.component.css
+│   │   │   │   ├── 🌐 orders.component.html
+│   │   │   │   ├── 📄 orders.component.ts
+│   │   │   │   └── 📄 orders.module.ts
+│   │   │   ├── 📁 product-detail
+│   │   │   │   ├── 🎨 product-detail.component.css
+│   │   │   │   ├── 🌐 product-detail.component.html
+│   │   │   │   └── 📄 product-detail.component.ts
+│   │   │   ├── 📁 product-list
+│   │   │   │   ├── 🎨 product-list.component.css
+│   │   │   │   ├── 🌐 product-list.component.html
+│   │   │   │   ├── 📄 product-list.component.ts
+│   │   │   │   ├── 📄 products-routing.module.ts
+│   │   │   │   └── 📄 products.module.ts
+│   │   │   ├── 📁 profile
+│   │   │   │   ├── 📄 profile-routing.module.ts
+│   │   │   │   ├── 🎨 profile.component.css
+│   │   │   │   ├── 🌐 profile.component.html
+│   │   │   │   ├── 📄 profile.component.ts
+│   │   │   │   └── 📄 profile.module.ts
+│   │   │   ├── 📁 register
+│   │   │   │   ├── 📄 register-routing.module.ts
+│   │   │   │   ├── 🎨 register.component.css
+│   │   │   │   ├── 🌐 register.component.html
+│   │   │   │   ├── 📄 register.component.ts
+│   │   │   │   └── 📄 register.module.ts
+│   │   │   └── 📁 wishlist
+│   │   │       ├── 📄 wishlist-routing.module.ts
+│   │   │       ├── 🌐 wishlist.component.html
+│   │   │       ├── 📄 wishlist.component.ts
+│   │   │       └── 📄 wishlist.module.ts
+│   │   ├── 📁 services
+│   │   │   ├── 📄 auth.service.ts
+│   │   │   ├── 📄 cart.service.ts
+│   │   │   ├── 📄 order.service.ts
+│   │   │   ├── 📄 product.service.ts
+│   │   │   ├── 📄 theme.service.ts
+│   │   │   └── 📄 wishlist.service.ts
+│   │   ├── 📁 shared
+│   │   │   ├── 📁 components
+│   │   │   │   ├── 📁 loading-overlay
+│   │   │   │   │   ├── 🎨 loading-overlay.component.css
+│   │   │   │   │   ├── 🌐 loading-overlay.component.html
+│   │   │   │   │   └── 📄 loading-overlay.component.ts
+│   │   │   │   ├── 📁 order-card
+│   │   │   │   │   ├── 🎨 order-card.component.css
+│   │   │   │   │   ├── 🌐 order-card.component.html
+│   │   │   │   │   └── 📄 order-card.component.ts
+│   │   │   │   └── 📁 product-card
+│   │   │   │       ├── 🎨 product-card.component.css
+│   │   │   │       ├── 🌐 product-card.component.html
+│   │   │   │       └── 📄 product-card.component.ts
+│   │   │   ├── 📁 validators
+│   │   │   │   └── 📄 password-match.validator.ts
+│   │   │   └── 📄 shared.module.ts
+│   │   ├── 📄 app-module.ts
+│   │   ├── 📄 app-routing-module.ts
+│   │   ├── 📄 app.config.ts
+│   │   ├── 🎨 app.css
+│   │   ├── 🌐 app.html
+│   │   ├── 📄 app.routes.ts
+│   │   ├── 📄 app.spec.ts
+│   │   └── 📄 app.ts
+│   ├── 🌐 index.html
+│   ├── 📄 main.ts
+│   └── 🎨 styles.css
+├── ⚙️ .editorconfig
+├── ⚙️ .gitignore
+├── ⚙️ .prettierrc
+├── 📄 LICENSE
+├── 📝 README.md
+├── ⚙️ angular.json
+├── ⚙️ db.json
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+├── ⚙️ tsconfig.app.json
+├── ⚙️ tsconfig.json
+└── ⚙️ tsconfig.spec.json
 ```
 
 ---
+
 
 ## ⚙️ Installation & Local Setup
 
